@@ -4,6 +4,7 @@ public class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var newWorker = new Employee("Radek", DateTime.Now, 2300);
+        Console.WriteLine(newWorker);
     }
 }
