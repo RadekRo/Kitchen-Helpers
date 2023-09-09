@@ -8,14 +8,14 @@ public class Chefs : Employee
     {
     }
 
-    public void Shout()
+    public override void Shout()
     {
         Console.WriteLine("Faster!");
     }
 
     public static void RequestIngredients()
     {
-        Ingredients skladniki = Ingredients.meat;
-        Console.WriteLine(skladniki);
+        Ingredients ingredient = Ingredients.meat;
+        Console.WriteLine($"Give me: {ingredient}!");
     }
 }
