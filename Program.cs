@@ -4,7 +4,9 @@ public class Program
 {
     static void Main(string[] args)
     {
-        var newWorker = new Employee("Radek", DateTime.Now, 2300);
+        //var newWorker = new Employee("Radek", DateTime.Now, 2300);
+        Chefs newWorker = new ("Greg", DateTime.Now, 2300);
         Console.WriteLine(newWorker);
+        Chefs.RequestIngredients();
     }
 }
