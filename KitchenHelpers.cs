@@ -17,16 +17,17 @@ namespace Kitchen_Helpers
         };
 
         
-        public void ProvideIngredient(Ingredients enumValue)
+        public int ProvideIngredient(Ingredients enumValue)
         {
             if (Inventory[enumValue] > 0)
             {
                 Inventory[enumValue]--;
-                Console.WriteLine("Here you are!");
+                return 1;
+                
             }
             else
             {
-                Shout();
+                return 0;
             }
         }
         public override void Shout()

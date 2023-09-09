@@ -14,12 +14,31 @@ public class Program
         Console.WriteLine(newChef);
         Console.WriteLine(newCook);
         Console.WriteLine(newEmployee);
-        newChef.RequestIngredients();
-        newChef.Shout();
-        newCook.Shout();
-        Console.WriteLine(KitchenHelper1.Inventory[Ingredients.meat]);
-        Console.WriteLine(KitchenHelper2.Inventory[Ingredients.meat]);
-        KitchenHelper1.ProvideIngredient(Ingredients.meat);
-        Console.WriteLine(KitchenHelper1.Inventory[Ingredients.meat]);
+        //newChef.RequestIngredients();
+        //newChef.Shout();
+        //newCook.Shout();
+        Console.WriteLine("KitchenHlelper1 inventory before request " + KitchenHelper1.Inventory[Ingredients.potato]);
+        Console.WriteLine("KitchenHlelper2 inventory before request " + KitchenHelper2.Inventory[Ingredients.potato]);
+        List<KitchenHelpers> KitchenHelpersList = new();
+        KitchenHelpersList.Add(KitchenHelper1);
+        KitchenHelpersList.Add(KitchenHelper2);
+        int KitchenHelperIndex = 0;
+        foreach (KitchenHelpers KitchenHelper in KitchenHelpersList)
+        {
+            if (KitchenHelper.ProvideIngredient(Ingredients.potato) == 1)
+            { 
+                Console.WriteLine("Here you are!");
+                break;
+            }
+            
+            if (KitchenHelperIndex == KitchenHelpersList.Count - 1) KitchenHelper.Shout();
+            KitchenHelperIndex++; 
+        }
+
+
+        Console.WriteLine("KitchenHlelper1 inventory after request " + KitchenHelper1.Inventory[Ingredients.potato]);
+        Console.WriteLine("KitchenHlelper2 inventory after request " + KitchenHelper2.Inventory[Ingredients.potato]);
+        //KitchenHelper1.ProvideIngredient(Ingredients.meat);
+        //Console.WriteLine(KitchenHelper1.Inventory[Ingredients.meat]);
     }
 }
