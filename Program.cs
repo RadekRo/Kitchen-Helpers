@@ -5,13 +5,16 @@ public class Program
     static void Main(string[] args)
     {
         //var newWorker = new Employee("Radek", DateTime.Now, 2300);
+
         Chefs newChef = new ("Greg", DateTime.Now, 2300);
+        Chefs newChef2 = new("Greg2", DateTime.Now, 2500);
         Cooks newCook = new("Kate", DateTime.Now, 1500);
         Employee newEmployee = new("Bob", DateTime.Now, 1800);
         KitchenHelpers KitchenHelper1 = new("Jane", DateTime.Now, 1200);
         KitchenHelpers KitchenHelper2 = new("Jude", DateTime.Now, 1100);
 
         Console.WriteLine(newChef);
+        Console.WriteLine(newChef2);
         Console.WriteLine(newCook);
         Console.WriteLine(newEmployee);
         //newChef.RequestIngredients();
@@ -38,7 +41,9 @@ public class Program
 
         Console.WriteLine("KitchenHlelper1 inventory after request " + KitchenHelper1.Inventory[Ingredients.potato]);
         Console.WriteLine("KitchenHlelper2 inventory after request " + KitchenHelper2.Inventory[Ingredients.potato]);
-        //KitchenHelper1.ProvideIngredient(Ingredients.meat);
-        //Console.WriteLine(KitchenHelper1.Inventory[Ingredients.meat]);
+
+        newCook.Shout();
+        newCook.Knives = 1;
+        newCook.Shout();
     }
 }

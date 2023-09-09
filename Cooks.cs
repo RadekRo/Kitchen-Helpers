@@ -10,8 +10,14 @@ namespace Kitchen_Helpers
 
         public override void Shout()
         {
-            base.Shout();
-            Console.Write(" I'm cooking!\n");
+            if (this.Knives < 1)
+            {
+                base.Shout();
+            }
+            else
+            {
+                Console.Write(" I'm cooking!\n");
+            }
         }
     }
 }

@@ -6,7 +6,8 @@ public class Employee
     DateTime BirthDate { get; set; }
     int Salary { get; set; }
     double Tax { get; set; }
-    const double TaxRate = 0.99; 
+    const double TaxRate = 0.99;
+    public int Knives { get; set; } = 0;
 
     public Employee(string name, DateTime birthdate, int salary)
     {
@@ -14,6 +15,7 @@ public class Employee
         BirthDate = birthdate;
         Salary = salary;
         Tax = Salary * TaxRate;
+        
     }
 
     public override string ToString()
@@ -23,6 +25,7 @@ public class Employee
 
     public virtual void Shout()
     {
-        Console.Write("Aaa!");
+        
+        Console.Write("I can't cook (I don't have a knife!)\n");
     }
 }
