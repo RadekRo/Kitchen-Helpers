@@ -6,7 +6,7 @@ public class Employee
     DateTime BirthDate { get; set; }
     int Salary { get; set; }
     double Tax { get; set; }
-    double TaxRate = 0.99; 
+    const double TaxRate = 0.99; 
 
     public Employee(string name, DateTime birthdate, int salary)
     {
