@@ -10,7 +10,8 @@ namespace Kitchen_Helpers
 
         public override void Shout()
         {
-            Console.WriteLine("Aaa! I'm cooking!");
+            base.Shout();
+            Console.Write(" I'm cooking!");
         }
     }
 }

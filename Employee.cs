@@ -23,6 +23,6 @@ public class Employee
 
     public virtual void Shout()
     {
-        Console.WriteLine("Aaa!");
+        Console.Write("Aaa!");
     }
 }
