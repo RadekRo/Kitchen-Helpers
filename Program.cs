@@ -8,6 +8,10 @@ public class Program
 
         //Chefs newChef = new ("Greg", DateTime.Now, 2300);
         //Chefs newChef2 = new("Greg2", DateTime.Now, 2500);
+        //var chef1 = new Chefs.GetInstance();
+        //var chef2 = new Chefs.GetInstance();
+        //if(chef1 == chef2)
+
         Cooks newCook = new("Kate", DateTime.Now, 1500);
         Employee newEmployee = new("Bob", DateTime.Now, 1800);
         KitchenHelpers KitchenHelper1 = new("Jane", DateTime.Now, 1200);
