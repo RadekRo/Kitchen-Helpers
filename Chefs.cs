@@ -2,13 +2,13 @@
 
 namespace Kitchen_Helpers;
 
-public class Chefs : Employee
+internal sealed class Chefs : Employee
 {
     // private static Chefs instance;
-    public Chefs(string name, DateTime birthdate, int salary) : base(name, birthdate, salary)
+    private Chefs(string name, DateTime birthdate, int salary) : base(name, birthdate, salary)
     {
     }
-
+    private static Chefs _instance;
 
     public override void Shout()
     {
@@ -21,15 +21,15 @@ public class Chefs : Employee
         Console.WriteLine($"Give me: {ingredient}!");
     }
 
-    //public static Chefs Instance
-    //{
-    //    get
-    //    {
-    //        if (instance == null)
-    //        {
-    //            instance = new Chefs("Greg", DateTime.Now, 2300);
-    //        }
-    //        return instance;
-    //    }
-    //}
+    public static Chefs GetInstance()
+    {
+        
+        {
+            if (_instance == null)
+            {
+                _instance = new Chefs("Greg", DateTime.Now, 2300);
+            }
+            return _instance;
+        }
+    }
 }
